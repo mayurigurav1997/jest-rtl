@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Greet } from './component/greet/Greet';
 import { Application } from './component/application/Application'
+import { Skills } from './component/skills/Skills'
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
       </header> */}
       <Greet name="Mayuri" />
       <Application />
+      <Skills skills={['HTML', 'CSS']} />
     </div>
   );
 }
