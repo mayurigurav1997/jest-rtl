@@ -22,8 +22,8 @@ function App() {
         </a>
         
       </header> */}
-      <Greet name="Mayuri" />
-      <Application />
+      {/* <Greet name="Mayuri" />
+      <Application /> */}
       <Skills skills={['HTML', 'CSS']} />
     </div>
   );
