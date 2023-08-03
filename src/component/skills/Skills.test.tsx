@@ -1,5 +1,5 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
+import { logRoles, render, screen } from "@testing-library/react";
 import { Skills } from "./Skills";
 
 describe("Skills", () => {
@@ -32,7 +32,10 @@ describe("Skills", () => {
   });
 
   test("Start Learning button is eventually displayed", async () => {
-    render(<Skills skills={skills} />);
+    const view = render(<Skills skills={skills} />);
+    logRoles(view.container);
+    // screen.debug();
+
     //find by return the promise
     const startLearningButton = await screen.findByRole(
       "button",
@@ -43,6 +46,7 @@ describe("Skills", () => {
         timeout: 2000,
       }
     );
+    // screen.debug();
     expect(startLearningButton).toBeInTheDocument();
   });
 });
