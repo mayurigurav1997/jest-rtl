@@ -25,6 +25,7 @@ function App() {
       {/* <Greet name="Mayuri" />
       <Application /> */}
       <Skills skills={['HTML', 'CSS']} />
+      <Counter />
     </div>
   );
 }
