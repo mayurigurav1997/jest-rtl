@@ -4,11 +4,14 @@ import { Greet } from './component/greet/Greet';
 import { Application } from './component/application/Application'
 import { Skills } from './component/skills/Skills'
 import { Counter } from './component/counter/Counter'
+import { AppProviders } from './providers/AppProviders'
+import { MuiMode } from './component/mui/MuiMode'
 
 function App() {
   return (
-    <div className="App">
-      {/* <header className="App-header">
+    <AppProviders>
+      <div className="App">
+        {/* <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -23,11 +26,13 @@ function App() {
         </a>
         
       </header> */}
-      {/* <Greet name="Mayuri" />
+        {/* <Greet name="Mayuri" />
       <Application /> */}
-      <Skills skills={['HTML', 'CSS']} />
-      <Counter />
-    </div>
+        {/* <Skills skills={['HTML', 'CSS']} />
+        <Counter /> */}
+        <MuiMode />
+      </div>
+    </AppProviders>
   );
 }
 
